@@ -1,6 +1,6 @@
-JavaScript
+#JavaScript
 
-JavaScript is synchronous single threaded language.
+. JavaScript is synchronous single threaded language.
 Absolutely! JavaScript operates on a single thread, using an event-driven, nonblocking model. This means it can handle asynchronous operations efficiently,
 making it great for tasks like handling user input, making API calls, and
 managing events.
