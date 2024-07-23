@@ -124,3 +124,27 @@ bar();
 - If the script is not in strict mode, the engine will create a new variable named number and assign 42 to it or return an error (if not in strict mode).
 
 - So when a variable is used the engine will traverse the scope chain until it finds the variable.
+
+![alt text](image.png)
+
+## What is Lexical Enc?
+
+A lexical environment is a structure that holds identifier-variable, mapping. (here identifier refers to the name of variables/functions, and the variable is the reference to actual object [including function object and array object] or primitive value).
+
+- Simply put, a lexical environment is a place where variables and references to the objects are stored.
+
+Lexical environment = EC of Local Memory + Reference to Lexical Env of it's parent
+
+## Quick Sum-up
+
+1. Lexical environment of it's parent is the scope where a function is physically present or defined.
+
+2. Whenever a new EC is pushed in the call Stack it holds a reference to the lexical env of it's parent. That is, the execution Context memory from where it was invoked.
+
+3. Global Execution Context holds reference to NULL.
+
+4. JS engine first looks for the variable/function being accessed in the local scope of the function, and id not found, it keeps on searching the lexical environment of its parent until it finds the variable/function being accessed.
+
+5. The Mechanism mentioned in point 4 is called Scope Chain.
+
+6. If the variable accessed is not found in the scope chain, then you will get the variable is NOT DEFINED Error in console.
